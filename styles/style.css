@@ -8,6 +8,25 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -32,7 +51,6 @@ html {
 
 .result {
   width: 711px;
-  height: 456px;
   margin-right: 30px;
 }
 
@@ -54,7 +72,6 @@ html {
 
 .search-form {
   display: flex;
-  height: 54px;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
@@ -98,7 +115,9 @@ html {
 }
 
 .search-form__label-text {
-  opacity: 0.7;
+  font-family: Fira Sans Condensed, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
   appearance: none;
 }
 
@@ -113,20 +132,20 @@ html {
 }
 
 .search-form__textfield {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
   color: #fff;
   font-family: inherit;
   font-size: 18px;
-  background-color: #1b1919;
+  background-color: transparent;
   appearance: none;
 }
 
 .search-form__textfield:hover, 
 .search-form__textfield:hover:placeholder {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .search-form__textfield:placeholder {
@@ -196,7 +215,7 @@ input[type="checkbox"]:checked::after {
 }*/
 
 .button { 
-  border: 1px solid #fff; 
+  border: 1px solid currentColor; 
   color: #fff; 
   font-family: Fira Sans Condensed, Arial, sans-serif; 
   font-size: 18px; 
@@ -242,7 +261,6 @@ input[type="checkbox"]:checked::after {
 
 .content__details {
   width: 399px;
-  height: 534px;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
@@ -250,7 +268,6 @@ input[type="checkbox"]:checked::after {
 
 .title {
   width: 259px;
-  height: 216px;
   font-family: Oswald, Arial, Helvetica, sans-serif;
   font-size: 75px;
   font-weight: bold;
@@ -294,6 +311,7 @@ input[type="checkbox"]:checked::after {
 }  
 
 .content__card-link:active {
+  background-color: #545050;
   text-decoration: underline;
 }  
 
@@ -364,28 +382,9 @@ input[type="checkbox"]:checked::after {
    background-color: transparent;
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
 .custom-scrollbar {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
